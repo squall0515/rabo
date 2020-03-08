@@ -1,0 +1,39 @@
+■初期設定
+「~/.gitconfig」に設定
+git config --global user.name "ユーザ名"
+git config --global user.email "メールアドレス"
+
+■リポジトリの初期化
+git init　ディレクトリ名
+■リポジトリの状態確認
+git status
+■空のファイルを追加
+touch index.html
+■ステージ領域へファイルを追加
+git add index.html
+■リポジトリに記録
+git commit -m "Create index.html"
+■コミットログの確認
+git log
+■
+$ git push origin master
+■変更差分を確認
+git diff
+■ブランチの一覧を表示
+git branch
+■ブランチの切り替え
+git checkout -b 新しいファイル名
+■ブランチを視覚的に確認する
+git log --graph
+■記録を戻る
+◎直前のコミットのみを取り消したい場合
+git reset --soft HEAD^
+◎直前のコミットから一つ前のコミットまでの操作を取り消したい場合
+git reset --hard HEAD^
+◎コミット後の変更を全て取り消したい場合
+ git reset --hard HEAD
+ ◎addを取り消したい場合
+ get reset --hard ハッシュ値
+ ◎直前のresetを取り消したい場合
+ git reset --hard ORIG_HEAD
+ 
